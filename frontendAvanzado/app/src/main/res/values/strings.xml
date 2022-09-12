@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">frontendAvanzado</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="titleToolBarCharacters">Characters</string>
+    <string name="titleToolBarDetails">Character Detail</string>
+    <string name="sortAZ">Ordenar: A-Z</string>
+    <string name="sortZA">Ordenar: Z-A</string>
+    <string name="speciesTitle">Species:</string>
+    <string name="statusTitle">Status:</string>
+    <string name="genderTitle">Gender:</string>
+</resources>
