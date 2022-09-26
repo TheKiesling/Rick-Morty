@@ -8,4 +8,12 @@
     <string name="speciesTitle">Species:</string>
     <string name="statusTitle">Status:</string>
     <string name="genderTitle">Gender:</string>
+    <string name="originTitle">Origin:</string>
+    <string name="episodeAppearancesTitle">Episode appearances:</string>
+    <string name="emailInput">Correo</string>
+    <string name="passwordInput">Contraseña</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="defaultEmail">kie21581@uvg.edu.gt</string>
+    <string name="errorLogin">ERROR: Correo y/o contraseña invalido(s)</string>
+    <string name="logout">Cerrar Sesión</string>
 </resources>

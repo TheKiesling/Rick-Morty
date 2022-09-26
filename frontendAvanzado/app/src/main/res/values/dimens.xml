@@ -8,7 +8,7 @@
     <dimen name="image_size_large">160dp</dimen>
     <dimen name="image_size_medium">64dp</dimen>
     <dimen name="image_size_small">32dp</dimen>
-    <dimen name="margin_large">96dp</dimen>
+    <dimen name="margin_large">80dp</dimen>
     <dimen name="icon_size_normal">24dp</dimen>
     <dimen name="zero">0dp</dimen>
 

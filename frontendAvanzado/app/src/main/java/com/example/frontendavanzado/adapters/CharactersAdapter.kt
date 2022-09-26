@@ -1,6 +1,5 @@
-package com.example.frontendavanzado
+package com.example.frontendavanzado.adapters
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,14 +10,16 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.request.CachePolicy
 import coil.transform.CircleCropTransformation
+import com.example.frontendavanzado.R
+import com.example.frontendavanzado.datasource.model.Result
 
 class CharactersAdapter(
-    private val dataSet: MutableList<Character>,
+    private val dataSet: MutableList<Result>,
     private  val characterItemListener: CharacterItemListener
     ): RecyclerView.Adapter<CharactersAdapter.ViewHolder>() {
 
     interface CharacterItemListener {
-        fun onCharacterItemClicked(character:Character, position: Int)
+        fun onCharacterItemClicked(character: Result, position: Int)
     }
 
     class ViewHolder(
@@ -30,10 +31,10 @@ class CharactersAdapter(
         private val txtName: TextView = view.findViewById(R.id.textView_itemCharacter_name)
         private val txtDescription: TextView = view.findViewById(R.id.textView_itemCharacter_description)
         private val layout: ConstraintLayout = view.findViewById(R.id.layout_itemCharacters)
-        private lateinit var character: Character
+        private lateinit var character: Result
 
-        fun setData(character: Character){
-            this.character=character
+        fun setData(character: Result){
+            this.character = character
 
             imageCharacter.load(character.image){
                 transformations(CircleCropTransformation())
