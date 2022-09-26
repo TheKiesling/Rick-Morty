@@ -22,16 +22,32 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
     private lateinit var buttonLogin: MaterialButton
     private lateinit var dataStore: DataStorage
 
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
         super.onViewCreated(view, savedInstanceState)
+
+        dataStore = DataStorage(requireContext())
+        verifyLogin()
 
         inputEmail = view.findViewById(R.id.textField_loginFragment_email)
         inputPassword = view.findViewById(R.id.textField_loginFragment_password)
         buttonLogin = view.findViewById(R.id.button_loginFragment_login)
 
-        dataStore = DataStorage(requireContext())
-
         setListeners()
+    }
+
+    private fun verifyLogin() {
+        CoroutineScope(Dispatchers.IO).launch {
+            if(dataStore.getValueFromKey("email") != null){
+                CoroutineScope(Dispatchers.Main).launch {
+                    requireView().findNavController().navigate(R.id.action_loginFragment_to_charactersFragment)
+                }
+            }
+        }
+
+
     }
 
     private fun setListeners() {
