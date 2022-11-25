@@ -3,6 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/menu_item_sync"
+        android:icon="@drawable/ic_sync"
+        android:title="@string/sync"
+        app:showAsAction="ifRoom">
+    </item>
+    <item
+        android:id="@+id/menu_item_delete"
+        android:icon="@drawable/ic_delete"
+        android:title="@string/delete"
+        app:showAsAction="ifRoom">
+    </item>
+    <item
         android:id="@+id/menu_item_sortAZ"
         android:title="@string/sortAZ"
         app:showAsAction="never">
@@ -11,6 +23,12 @@
     <item
         android:id="@+id/menu_item_sortZA"
         android:title="@string/sortZA"
+        app:showAsAction="never">
+    </item>
+
+    <item
+        android:id="@+id/menu_item_logout"
+        android:title="@string/logout"
         app:showAsAction="never">
     </item>
 
